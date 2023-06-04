@@ -54,7 +54,7 @@ class ComFuncTools:
                     lstResult.append(Input[i])
             
             return lstResult
-        
+
 
         def getEnvSysArgvWithParsing() -> list:
             """
@@ -63,15 +63,15 @@ class ComFuncTools:
             
             lstRowData4EnvSysArgv = sys.argv[1:]
             return ComFuncTools.CmdTools.__parseDashArgv(lstRowData4EnvSysArgv)
-        
+
 
         def getEnvSysArgv():
             """
             原汁原味的呈現「命令行參數」內容
             """
             return sys.argv[1:]
-        
-        
+
+
         def __cvtKeyValueToDict4List(Input:list) -> list:  # 只是將「['XXX=OOO']」轉換成「{'XXX': 'OOO'}」 (只是為了「命令行串列」而設計的功能而已)
             lstResult = []
             for sElement in Input:
@@ -83,8 +83,8 @@ class ComFuncTools:
                     lstResult.append(sElement)
             
             return lstResult
-        
-        
+
+
         def getEnvSysArgvByKey(Key:str) -> str:
             """
             直接抓取「.py」後面的參數並輸入一個鍵(KEY)取值(VALUE)
@@ -134,5 +134,5 @@ if __name__ == '__main__':
     print(ComFuncTools.CmdTools.getEnvSysArgvWithParsing())  # ['111', '222', '333', 'ENV=PROD', 'Fish=Onion', 'HIHI=666']
     print(ComFuncTools.CmdTools.getEnvSysArgvByKey('ENV'))  # PROD
     
-    print(ComFuncTools.DecodeTools.RemoveNonASCII("說你　好 HIHI"))
+    print(ComFuncTools.DecodeTools.RemoveNonASCII("过客　葱蔥 OnionTraveler"))
     pass
